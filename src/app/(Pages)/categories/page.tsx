@@ -1,16 +1,16 @@
-import CategoriesLg from "@/app/_Components/Categories/CategoriesLg";
+import Categories from "@/app/_Components/Categories/Categories";
 import PageHeader from "./../header/page";
 
-const Categories = () => {
+const CategoriesPage = () => {
   return (
     <>
       <PageHeader
         title="All Categories"
         subtitle="Browse our wide range of product categories"/>
 
-      <CategoriesLg/>
+      <Categories />
     </>
   );
 };
 
-export default Categories;
+export default CategoriesPage;

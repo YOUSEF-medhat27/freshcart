@@ -27,7 +27,7 @@ export default async function CategoryDetailsPage({ params }: Props) {
 
   return (
     <div>
-      {/* Header */}
+    
       <div className="bg-linear-to-br from-green-500 to-green-400 px-4 py-10 text-white">
         <div className="mx-auto max-w-6xl">
           <p className="mb-4 text-sm">
@@ -56,10 +56,10 @@ export default async function CategoryDetailsPage({ params }: Props) {
         </div>
       </div>
 
-      {/* Content */}
+      
       <div className="mx-auto max-w-6xl px-4 py-8">
         <Link
-          href="/Categories"
+          href="/categories"
           className="mb-6 inline-block text-gray-600 hover:text-green-600"
         >
           ← Back to Categories
@@ -70,7 +70,7 @@ export default async function CategoryDetailsPage({ params }: Props) {
         </h2>
 
         {subs.length === 0 ? (
-          <p className="text-gray-500">مفيش subcategories للـ category دي.</p>
+          <p className="text-gray-500"> No subcategories Found for this category.</p>
         ) : (
           <SubCategoriesList subs={subs} />
         )}

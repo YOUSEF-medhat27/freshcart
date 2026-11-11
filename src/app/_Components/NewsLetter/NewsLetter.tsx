@@ -33,7 +33,6 @@ const Newsletter = () => {
 
     setLoading(true);
     try {
-      // TODO: وصّل هنا الـ API / server action بتاع الاشتراك
       await new Promise((r) => setTimeout(r, 800));
 
       toast.success("Thanks for subscribing!", { position: "top-center" });
@@ -52,12 +51,12 @@ const Newsletter = () => {
       <div className="container mx-auto px-4">
         <div className="relative">
           <div className="relative overflow-hidden rounded-[2.5rem] border border-emerald-100/50 bg-linear-to-br from-emerald-50 via-white to-teal-50 shadow-2xl shadow-emerald-500/10">
-            {/* Decorative blurs */}
+          
             <div className="pointer-events-none absolute right-0 top-0 h-80 w-80 -translate-y-1/2 translate-x-1/4 rounded-full bg-linear-to-br from-emerald-200/40 to-transparent blur-3xl" />
             <div className="pointer-events-none absolute bottom-0 left-0 h-64 w-64 -translate-x-1/4 translate-y-1/2 rounded-full bg-linear-to-tr from-teal-200/30 to-transparent blur-3xl" />
 
             <div className="relative grid gap-8 p-8 lg:grid-cols-5 lg:p-14">
-              {/* Left: newsletter */}
+       
               <div className="space-y-6 lg:col-span-3">
                 <div className="flex items-center gap-4">
                   <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-linear-to-br from-emerald-500 to-teal-500 shadow-lg shadow-emerald-500/30">
@@ -127,7 +126,7 @@ const Newsletter = () => {
                 </form>
               </div>
 
-              {/* Right: mobile app */}
+             
               <div className="lg:col-span-2 lg:border-l lg:border-emerald-100 lg:pl-8">
                 <div className="flex h-full flex-col justify-center">
                   <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-gray-900 to-gray-800 p-8 text-white">

@@ -33,7 +33,7 @@ const HomeCard = ({ product }: { product: Product }) => {
   return (
     <div className="product">
       <div className="h-full bg-white border border-gray-200 rounded-lg overflow-hidden transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-[0_12px_24px_-6px_rgba(0,0,0,0.15)]">
-        {/* Image + badges + action buttons */}
+      
         <div className="relative">
           <Link href={`/productDetails/${product.id}`}>
           <img
