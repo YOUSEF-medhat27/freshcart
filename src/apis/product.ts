@@ -41,3 +41,19 @@ export async function getProductsByBrand(id: string): Promise<Product[]> {
   cacheLife("hours");
   return fetchData<Product[]>(`/products?brand=${id}&limit=100`);
 }
+
+export async function getFilteredProducts(filters: {
+  subcategory?: string;
+  category?: string;
+  brand?: string;
+}): Promise<Product[]> {
+  "use cache";
+  cacheLife("hours");
+
+  const params = new URLSearchParams({ limit: "100" });
+  if (filters.subcategory) params.set("subcategory[in]", filters.subcategory);
+  if (filters.category) params.set("category[in]", filters.category);
+  if (filters.brand) params.set("brand", filters.brand);
+
+  return fetchData<Product[]>(`/products?${params.toString()}`);
+}

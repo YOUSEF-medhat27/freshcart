@@ -32,7 +32,7 @@ export default async function CategoryDetailsPage({ params }: Props) {
         <div className="mx-auto max-w-6xl">
           <p className="mb-4 text-sm">
             <Link href="/">Home</Link> /{" "}
-            <Link href="/Categories">Categories</Link> /{" "}
+            <Link href="/categories">Categories</Link> /{" "}
             <span className="font-semibold">{category.name}</span>
           </p>
 
